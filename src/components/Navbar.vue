@@ -12,14 +12,14 @@
         <mu-list>
           <mu-list-item button to='/day1'>
             <mu-list-item-title>
-              Day 1
+              Day 1 - Drumkit
             </mu-list-item-title>
           </mu-list-item>
           <mu-list-item button>
             <mu-list-item-title>Day 2</mu-list-item-title>
           </mu-list-item>
           <mu-list-item button to='/day5'>
-            <mu-list-item-title>Day 5</mu-list-item-title>
+            <mu-list-item-title>Day 5 - Flex Panels</mu-list-item-title>
           </mu-list-item>
         </mu-list>
       </mu-drawer>
