@@ -8,6 +8,7 @@ install:
 
 script:
   - yarn run test:unit
+  - yarn run test:e2e
   - yarn run build
 
 branches:
