@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "yarn serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -11,6 +12,7 @@
     "deploy": "rm -rf dist && yarn && yarn build --mode production && cd dist && touch .static && git init && git add -A && git commit -m init && git push dokku@dev2.kaido.team:js30 master:master -f"
   },
   "dependencies": {
+    "@vue/cli-service": "^3.8.4",
     "muse-ui": "^3.0.1",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.21",
@@ -23,7 +25,6 @@
     "@vue/cli-plugin-eslint": "^3.3.0",
     "@vue/cli-plugin-pwa": "^3.3.0",
     "@vue/cli-plugin-unit-jest": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",

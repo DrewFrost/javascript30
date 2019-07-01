@@ -1,22 +1,18 @@
 language: node_js
-
 node_js:
-  - '12.4'
-
+- '12.4'
 install:
-  - yarn install
-
+- yarn install
 script:
-  - yarn run test:unit
-  - yarn run build
-
+- yarn run test:unit
+- yarn run build
 branches:
   only:
-    - master
-
-notifications:
-  email:
-    recipients:
-      - drew.vfrost@gmail.com
-    on_success: always
-    on_failure: always
+  - master
+deploy:
+  provider: heroku
+  app: travis-javascript30
+  on:
+    repo: DrewFrost/javascript30
+  api_key:
+    secure: BCmgko+lgJ0fa9LQgwipNy/4Bd0kLdt3y5Wb9INxFgOfHS8/7JHUI5pldfuJpz90a1HJ80PK3Yysv1Q9HpeDVKOcQtYP1I+llcxit4/v22LNbm0EZTSfbxRPSeEWsIzdAlgGMq+wx/Ro3cm3f9S8SdyKF7O1eMEPEgsJekLjCyTkWnUogYO3knAYuv5FFu2cz2lj5YpPi+Vi1eo1qkz/3XOiYR96H6lcbrEUYcreiR7JJ42tsQsOupeizZN3YeCmTo3G2biGIe9qJ/upuEWR6jevJVudeveg3Mi0+PztVYsUcDszu0quBUefvOiMPOiIKEX104w4kDzb1BrWgvI959jnZi9t94lXZy0zL3QC9qS5Zq+ONPlrB41i4iiNSKrLUWpj+MSJjO4uHypt4Lx/BL0d1D4Qc36TcXvnlekzgRIz1HOS5XLPw3zKOl+MLwxVBiyShSHIf9gatJreNLZhbsxLeoBWUxvHM0tCMtoyUjUeSFn3UetJ8nD77pJwp8i8MEUpeQlP+pyQBXNxxoOWNjBrLnVVhXNNVr1F3wgKhyUYMk8Xh730C8VnEYYpkXMBuilSSCtsXqt1l5n2xJEEMwuhsSjqujq5RKz9gNTmB6zfdiwOqFZyTnoQEw/AoFrilsWuoGl8szQ9MAu0UaA349uwn65RvvQ9dCwsGj6rNS8=
