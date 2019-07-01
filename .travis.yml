@@ -1,0 +1,27 @@
+language: node_js
+
+node_js:
+  - "12.4"
+
+install:
+  - yarn install
+
+script:
+  - yarn run test:unit
+  - yarn run build
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  repo: DrewFrost/javascript30
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
